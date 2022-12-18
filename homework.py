@@ -1,4 +1,5 @@
 from typing import Dict
+from typing import List
 
 
 class InfoMessage:
@@ -125,7 +126,7 @@ class Swimming(Training):
 
 def read_package(workout_type: str, data: list[int, float]) -> Training:
     """Прочитать данные полученные от датчиков."""
-    types_of_training: Dict[str, Training] = {
+    types_of_training: Dict[str, List[Training]] = {
         'SWM': Swimming,
         'RUN': Running,
         'WLK': SportsWalking
